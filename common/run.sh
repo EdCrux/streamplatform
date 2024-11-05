@@ -15,7 +15,7 @@ protoc \
     --go-grpc_opt=paths=source_relative \
     ${SERVICE_NAME}/*.proto
 
-cd ./golang/${SERVICE_NAME}
+cd golang/${SERVICE_NAME}
 
 go mod init \
     github.com/EdCrux/streamplatform/${SERVICE_NAME}
