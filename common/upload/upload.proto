@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option go_package="github.com/EdCrux/streamplatform/upload";
+
+message FileMetadata {
+    string title = 1;
+    string description = 2;
+    string author = 3;
+    string filename = 4;
+}
+
+message FileChunk {
+    bytes chunk = 1;
+    string total_chunks = 2;
+    string chunk_index = 3;
+    string is_last_chunk = 4;
+}
+
+message FileUploadRequest {
+    FileMetadata metadata = 1;
+    FileChunk data = 3;
+}
+
+message FileUploadResponse {
+    string message = 1;
+    bool success  = 2;
+}
+
+service UploadService {
+    rpc StreamFile(FileUploadRequest) returns (FileUploadResponse);
+}
