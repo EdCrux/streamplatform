@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package="github.com/EdCrux/streamplatform/upload";
+option go_package="github.com/EdCrux/streamplatform/golang/upload";
 
 message FileMetadata {
     string title = 1;
