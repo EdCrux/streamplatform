@@ -1,4 +1,4 @@
-#!/bin/bash
+
 SERVICE_NAME=$1
 RELEASE_VERSION=$2
 
