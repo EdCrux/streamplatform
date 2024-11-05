@@ -18,7 +18,7 @@ protoc \
 cd golang/${SERVICE_NAME}
 
 go mod init \
-    github.com/EdCrux/streamplatform/${SERVICE_NAME}
+    github.com/EdCrux/streamplatform/golang/${SERVICE_NAME}
 go mod tidy
 
 cd ../../
